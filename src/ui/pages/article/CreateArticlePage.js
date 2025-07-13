@@ -43,7 +43,7 @@ export class CreateArticlePage {
 
   async fillTagsField(tags) {
     await test.step(`Fill Tags field`, async () => {
-      for (const tag of await tags) {
+      for (const tag of tags) {
         await this.tagsField.fill(tag);
         await this.page.keyboard.press('Enter');
       }

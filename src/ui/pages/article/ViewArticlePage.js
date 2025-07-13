@@ -15,8 +15,6 @@ export class ViewArticlePage {
     this.bodyArticleDetailsLocator = page.locator('div .article-meta').nth(1);
     this.bodyArticleAuthorName = this.bodyArticleDetailsLocator
       .locator('a.author').nth(0);
-    this.editButtonHeader = this.bodyArticleDetailsLocator
-      .locator('a').filter({ hasText: 'Edit Article' });
     this.editButtonBody = page.getByRole('button', {
       name: ' Edit Article'
     }).last();
